@@ -1,0 +1,60 @@
+<div class="container">
+  <form (ngSubmit)="onSubmit()" [formGroup]="studentForm" class="example-form">
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Student Name</mat-label>
+            <input formControlName="studentName" matInput />
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+
+    <p>
+      <mat-form-field class="example-full-width">
+        <mat-label>Address</mat-label>
+        <input formControlName="studentAddress" matInput />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Telephone</mat-label>
+        <input matInput formControlName="studentTelephone" />
+      </mat-form-field>
+    </p>
+
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Birthday</mat-label>
+            <input
+              formControlName="studentBirthday"
+              matInput
+              placeholder="Ex. yyyy-mm-dd"
+              type="date"
+            />
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Year</mat-label>
+            <input
+              formControlName="studentYear"
+              matInput
+              placeholder="Ex. 1995"
+            />
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+
+    <div class="cta">
+      <button mat-raised-button color="primary">
+        {{ editMode ? "Edit Student" : "Add Student" }}
+      </button>
+      <button mat-raised-button color="warn" (click)="onCancel()">
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,22 @@
+h1 {
+  /* text-align: center; */
+  margin: 0;
+}
+
+.wrapper {
+  padding: 100px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50%;
+  margin-bottom: 30px;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
